@@ -42,15 +42,6 @@
     </properties>
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                    <include>**/*.sql</include>
-                </includes>
-            </resource>
-        </resources>
         <plugins>
             <!--定义JDK版本-->
             <plugin>
