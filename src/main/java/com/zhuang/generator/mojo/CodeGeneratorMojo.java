@@ -33,9 +33,11 @@ public class CodeGeneratorMojo extends AbstractMojo {
             Class<?> codeGeneratorClass = Class.forName(myGeneratorProperties.getImplementClass());
             CodeGenerator codeGenerator = (CodeGenerator) codeGeneratorClass.getConstructor(MyGeneratorProperties.class).newInstance(myGeneratorProperties);
             codeGenerator.setOutputPath(basedir.getAbsolutePath());
+            codeGenerator.setTemplatePath(getClass().getResource("/code-templates").getPath());
             codeGenerator.generate();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
+
 }
