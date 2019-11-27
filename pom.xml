@@ -2,65 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
-
     <groupId>com.github.weibin268</groupId>
     <artifactId>my-generator-maven-plugin</artifactId>
     <version>1.0.2</version>
     <packaging>maven-plugin</packaging>
     <name>my-generator-maven-plugin</name>
-    <description>代码生成器</description>
-    <url>https://github.com/weibin268/my-generator-maven-plugin</url>
-
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <id>weibin268</id>
-            <name>zhuangweibin</name>
-            <email>448075543@qq.com</email>
-        </developer>
-    </developers>
-
-    <scm>
-        <connection>scm:git:ssh://github.com/weibin268/my-generator-maven-plugin.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/weibin268/my-generator-maven-plugin.git</developerConnection>
-        <url>https://github.com/weibin268/my-generator-maven-plugin</url>
-    </scm>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <build>
         <plugins>
-            <!--定义JDK版本-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-            <!--排除执行测试代码-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.21.0</version>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
@@ -71,25 +20,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>com.github.weibin268</groupId>
             <artifactId>my-generator</artifactId>
             <version>1.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.weibin268</groupId>
-            <artifactId>my-data</artifactId>
-            <version>1.0.3</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.40</version>
         </dependency>
         <!--begin maven plugin-->
         <dependency>
@@ -104,11 +37,6 @@
             <scope>provided</scope>
         </dependency>
         <!--end maven plugin-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-            <version>5.2.0.RELEASE</version>
-        </dependency>
     </dependencies>
 
 </project>
