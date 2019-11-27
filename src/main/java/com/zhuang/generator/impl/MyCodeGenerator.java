@@ -21,7 +21,7 @@ public class MyCodeGenerator extends CodeGenerator {
         EntityMapping entityMapping = getEntityMapping(dataModel);
         StringUtils stringUtils = getStringUtils(dataModel);
         String viewPath = "/src/main/resources/views";
-        String filePath = templateName;
+        String filePath = null;
         if (templateName.equalsIgnoreCase("entity.java.ftl")) {
             filePath = PathUtils.combine(getJavaPath(), getBasePackagePath(), getModuleName(), "entity", entityMapping.getEntityName()) + ".java";
         } else if (templateName.equalsIgnoreCase("service.java.ftl")) {
