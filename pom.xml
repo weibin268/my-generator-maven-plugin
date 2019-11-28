@@ -12,7 +12,7 @@
         <dependency>
             <groupId>com.github.weibin268</groupId>
             <artifactId>my-generator</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3</version>
         </dependency>
         <!--begin maven plugin-->
         <dependency>
